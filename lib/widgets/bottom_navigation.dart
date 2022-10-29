@@ -1,3 +1,4 @@
+import 'package:finance_app/screens/add_screen.dart';
 import 'package:finance_app/screens/home.dart';
 import 'package:finance_app/screens/statistics.dart';
 import 'package:finance_app/widgets/chart.dart';
@@ -24,7 +25,9 @@ class _BottomState extends State<Bottom> {
     return Scaffold(
       body: screen[indexColor],
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=> AddScreen()));
+        },
         backgroundColor: const Color(0xff368983),
         child: const Icon(
           Icons.add,
